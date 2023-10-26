@@ -1,0 +1,118 @@
+#first {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: .5s;
+}
+
+#first:hover {
+    /* height: 200px;
+    width: 200px; */
+    transform: scale(2) translate(50px, 50px) rotate(360deg);
+    background-color: blue;
+}
+
+img {
+    width: 200px;
+}
+
+.card-parent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    border: 1px solid red;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 5px black;
+}
+
+#second {
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* animation-name: animation-for-second; */
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animation-for-second {
+    0% {
+        width: 100px;
+    }
+    25% {
+        width: 500px;
+    }
+    50% {
+        width: 200px;
+    }
+    75% {
+        width: 400px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+.parent-typing-effect {
+    display: flex;
+}
+
+#typing-effect {
+    font-size: 24px;
+    /* animation: typing-animation .5s, change-width 2s steps(30, end); */
+    /* animation-name: typing-animation;
+    animation-duration: 2s; */
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing-animation {
+    0% {
+        border-right: none;
+    }
+    100% {
+        border-right: 2px solid black;
+    }
+}
+
+@keyframes change-width {
+    0% {
+        width: 0;
+    }
+    75% {
+        width: 100%;
+    }
+}
+
+.typography {
+    margin: 100px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+.class1 {
+    font-size: 2em;
+}
+
+/* em is relative to the immediate parent's font size */
+/* rem is relative to the root element's font size */
+
+body {
+    font-size: 24px;
+}
+
+:root {
+    font-size: 10px;
+}
